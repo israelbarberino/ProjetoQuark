@@ -7,8 +7,8 @@
 >* Linguagem: C# ASP.NET MVC
 >* Database: MySQL
 >* Modelagem de dados: BR Modelo / MS Visio
->* Metodologia ágil: 
->* Acompanhamento: Trello
+>* Metodologia Ágil e SCRUM
+>* Trello
 ><br>
 ><p><b>Curso Técnico de Desenvolvimento de Sistemas</b></p>
 ><p><b>ETEC Prof Basilides de Godoy - Vila Leopoldina</b></p>
