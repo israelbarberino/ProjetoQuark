@@ -5,8 +5,9 @@
  Quark
 > / Veículos Híbridos e Elétricos
 >* Linguagem: C# ASP.NET MVC
+>* IDE: Visual Studio 2022
 >* Database: MySQL
->* Modelagem de dados: BR Modelo / MS Visio
+>* Modelagem:  BR Modelo / MS Visio
 >* Metodologia Ágil e SCRUM
 >* Trello
 ><br>
