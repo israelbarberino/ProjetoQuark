@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProjetoQuark.Models.ModelProduto>
+
+@{
+    ViewBag.Title = "ConsultaCarroEletrico";
+}
+
+<h2>ConsultaCarroEletrico</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imagemProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantidadeProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valorProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descricaoProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codCat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codProd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeProd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imagemProd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantidadeProd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valorProd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descricaoProd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codCat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
