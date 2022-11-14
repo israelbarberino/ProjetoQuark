@@ -93,12 +93,7 @@ namespace ProjetoQuark.Controllers
 
         /* ------- CONTROLES DO USUARIO LOGADO   ---------- */
 
-
-
-
-
-
-
+        /*FAZER UM CONTROLE DE LOGIN E USUSRIO AQUI */
 
 
         /* ------- CONTROLES DO ADMINISTRADOR DO SISTEMA - ACESSO RESTRITO   ---------- */
