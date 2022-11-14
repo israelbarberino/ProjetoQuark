@@ -1,60 +1,91 @@
 ﻿@model ProjetoQuark.Models.ModelProduto
+
 @{
-    ViewBag.Title = "CadVeiculos";
-
-    List<string> TipoVeiculos = new List<string>();
-    TipoVeiculos.Add("1");
-    TipoVeiculos.Add("2");
-    TipoVeiculos.Add("3");
-    TipoVeiculos.Add("4");
+    ViewBag.Title = "Cadastrar Novo Produto";
 }
+<h2 style="text-align:center;">Novo produto</h2>
 
-<h2>Cadastro de veiculos</h2>
+<div class="center">
+    @using (Html.BeginForm("Index", "Produto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
 
-@using (Html.BeginForm("CadVeiculos", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group space-around-flex">
+            <div class="">
+                @Html.LabelFor(model => model.nomeProd, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nomeProd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nomeProd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group space-around-flex">
+            <div class="">
+                @Html.LabelFor(model => model.descricaoProd, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.descricaoProd, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.descricaoProd, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-    @Html.LabelFor(m => m.nomeProd)
-    <br />
-    @Html.EditorFor(m => m.nomeProd)
-    <br />
-    <br />
+        <div class="form-group center">
+            <div>
+                @Html.LabelFor(model => model.quantidadeProd, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.quantidadeProd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.quantidadeProd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group center">
+            <div>
+                @Html.LabelFor(model => model.valorProd, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.valorProd, new { htmlAttributes = new { @class = "form-control", placeholder = "Preço unitário de fábrica" } })
+                @Html.ValidationMessageFor(model => model.valorProd, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-    @Html.LabelFor(m => m.imagemProd)
-    <br />
-    @Html.EditorFor(m => m.imagemProd)
-    <br />
-    <br />
+        <div class="form-group space-around-flex">
+            <div class="">
+                @Html.LabelFor(model => model.codCat, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="">
+                @Html.DropDownList("Categoria", "Escolha a Categoria")
+            </div>
+        </div>
 
-    @Html.LabelFor(m => m.quantidadeProd)
-    <br />
-    @Html.EditorFor(m => m.quantidadeProd)
-    <br />
-    <br />
+        <div class="form-group center">
+            <div>
+                <label class="control-label col-md-2" for="file">Foto</label>
+            </div>
+            <div class="col-md-10">
+                <input type="file" name="file" id="file" /> <br />
+            </div>
+        </div>
 
-    @Html.LabelFor(m => m.valorProd)
-    <br />
-    @Html.EditorFor(m => m.valorProd)
-    <br />
-    <br />
+        <div class="form-group center">
+            <div class="col-md-10">
+                @ViewBag.msg <br />
+            </div>
+        </div>
 
-    @Html.LabelFor(m => m.descricaoProd)
-    <br />
-    @Html.EditorFor(m => m.descricaoProd)
-    <br />
-    <br />
-
-    @Html.LabelFor(m => m.codCat)
-    <br />
-    @Html.DropDownListFor(m => m.codCat, new MultiSelectList(TipoVeiculos))
-    <br />
-    <br />
-
-    <input type="submit" value="Cadastrar" name="btnCad" />
-
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar Produto" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
 }
-
-@ViewBag.mssge
 
 <br />
 @Html.ActionLink("Listar veiculos", "ListaVeiculos", "Home") | @Html.ActionLink("Voltar", "Index", "Home")

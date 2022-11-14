@@ -26,6 +26,29 @@ namespace ProjetoQuark.Dados
             con.MyDesconectarBD();
         }
 
+        public List<ModelCategoria> GetCategoria()
+        {
+            List<ModelCategoria> CategoriaList = new List<ModelCategoria>();
+
+            MySqlCommand cmd = new MySqlCommand("select * from tbCategoria order by codCat", con.MyConectarBD());
+            MySqlDataAdapter sd = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            sd.Fill(dt);
+            con.MyDesconectarBD();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                CategoriaList.Add(
+                    new ModelCategoria
+                    {
+                        codCat = Convert.ToString(dr["codCat"]),
+                        categoria = Convert.ToString(dr["Categoria"])
+                    });
+            }
+            return CategoriaList;
+        }
+
         public DataTable CarregaCarros()
         {
             MySqlCommand cmd = new MySqlCommand("select * from vw_veiculos where codCat <= 2", con.MyConectarBD());

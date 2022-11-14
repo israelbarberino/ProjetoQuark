@@ -8,7 +8,7 @@
 @ViewBag.confCadastro
 @ViewBag.msgLogar
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
 {
     <fieldset>
         <br />
@@ -43,7 +43,9 @@
         </div>
 
         <input type="submit" class="button button-a button-big button-rouded" value="ENTRAR"><br />
+
         <br />
+        @Html.ActionLink("Cadastre-se aqui", "CadCliente", new { /* id=item.PrimaryKey */ })
 
     </fieldset>
 }

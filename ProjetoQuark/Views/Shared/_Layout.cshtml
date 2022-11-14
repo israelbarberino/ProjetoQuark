@@ -27,7 +27,7 @@
                     <li>@Html.ActionLink("Sobre nós", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
 
-                    @if (Session["tipologado2"] != null)
+                    @if (Session["tipoLogado2"] != null)
                     {
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -41,25 +41,32 @@
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Consultar <span class="caret"></span>
+                                Nossos produtos <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Clientes", "ConsultaClientes", "Home")</li>
                                 <li>@Html.ActionLink("Veículos", "ConsultaVeiculos", "Home")</li>
                                 <li>@Html.ActionLink("Motocicletas", "ConsultaMotocicleta", "Home")</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Clientes <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Cadastrar cliente", "CadCliente", "Home")</li>
+                                <li>@Html.ActionLink("Lista de clientes", "ConsultaClientes", "Home")</li>
                             </ul>
                         </li>
                     }
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-
-                    @if (Session["usuarioLogado"] != null)
+                    @if (Session["usuariologado"] == null || Session["senhaLogado"] == null)
                     {
-                        <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
                     }
                     else
                     {
-                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
                     }
                 </ul>
             </div>
