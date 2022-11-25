@@ -123,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Dados\AcoesCategoria.cs" />
     <Compile Include="Dados\AcoesCliente.cs" />
     <Compile Include="Dados\AcoesLogin.cs" />
     <Compile Include="Dados\AcoesVeiculos.cs" />
@@ -184,9 +185,11 @@
     <Content Include="Views\Home\ConsultaMotoHibrida.cshtml" />
     <Content Include="Views\Home\ListarClientes.cshtml" />
     <Content Include="Views\Adm\CadCliente.cshtml" />
+    <Content Include="Views\Home\ConsultaCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Imagens\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -23,20 +23,7 @@
                                 </h4>
                                 <h5>R$ @item.valorProd</h5>
                             </div>
-                            <div class="card-footer space-between-flex" style="width:90%">
-                                <div>
-                                    @Html.ActionLink("Descubra mais", "Detalhes", "Produto", new { id = item.codProd }, new { @class = "btn btn-default btn-acao" })
-                                </div>
-                                <div>
-                                    @using (Html.BeginForm("Comprar", "Home", FormMethod.Post))
-                                    {
-                                        <input type="hidden" name="id" value=@item.codProd>
-                                        <input type="hidden" name="pre" value=@item.valorProd>
-                                        <input type="hidden" name="quantidade" value="1">
-                                        <button type="submit" class="btn btn-default btn-acao-primario">Comprar</button>
-                                    }
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 }

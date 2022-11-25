@@ -77,7 +77,8 @@
                     }
                     else
                     {
-                        <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+                        <li>@Html.ActionLink("Olá, " /*+ @User.Identity.Name,*/, "", "")</li>
+                        <li>@Html.ActionLink("Sair  ", "Logout", "Home")</li>
                     }
                 </ul>
             </div>

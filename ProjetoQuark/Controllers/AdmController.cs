@@ -9,6 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.Web.UI;
+using System.Security.Claims;
+using System.Security.Policy;
 
 namespace ProjetoQuark.Controllers
 {

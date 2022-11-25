@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Security.Cryptography;
+using System.Web.Services.Description;
 
 namespace ProjetoQuark.Controllers
 {
@@ -19,6 +20,7 @@ namespace ProjetoQuark.Controllers
         AcoesLogin acLg = new AcoesLogin();
         AcoesVeiculos acV = new AcoesVeiculos();
         AcoesCliente acC = new AcoesCliente();
+        AcoesCategoria acCat = new AcoesCategoria();
 
 
         /* ------- CONTROLE DE ACESSO - LOGIN LOGOUT   ---------- */
@@ -130,9 +132,10 @@ namespace ProjetoQuark.Controllers
 
         // ------------------ CADASTRO DE VEICULOS - SISTEMA DE CARREGAR OS DADOS PARA CADASTRO ---------------- //
 
+
         public void CarregaCategoria()
         {
-            List<SelectListItem> categoria = new List<SelectListItem>();
+            List<SelectListItem> categorias = new List<SelectListItem>();
             using (MySqlConnection con = new MySqlConnection("Server=localhost; DataBase=bdConcessionaria; User=root;pwd=12345678"))
             {
                 con.Open();
@@ -141,7 +144,7 @@ namespace ProjetoQuark.Controllers
 
                 while (rdr.Read())
                 {
-                    categoria.Add(new SelectListItem
+                    categorias.Add(new SelectListItem
                     {
                         Text = rdr[1].ToString(),
                         Value = rdr[0].ToString()
@@ -150,74 +153,64 @@ namespace ProjetoQuark.Controllers
                 con.Close();
                 con.Open();
             }
-            ViewBag.categoria = new SelectList(categoria, "value", "Text");
-
+            ViewBag.categorias = new SelectList(categorias, "value", "Text");
         }
 
+        public ActionResult ConsultaCategoria(ModelCategoria modCat)
+        {
+            GridView dgv = new GridView(); // Instância para a tabela
+            dgv.DataSource = acCat.CarregaCategoria(); //Atribuir ao grid o resultado da consulta
+            dgv.DataBind(); //Confirmação do Grid
+            StringWriter sw = new StringWriter(); //Comando para construção do Grid na tela
+            HtmlTextWriter htw = new HtmlTextWriter(sw); //Comando para construção do Grid na tela
+            dgv.RenderControl(htw); //Comando para construção do Grid na tela
+            ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
+            return View();
+        }
 
         public ActionResult CadVeiculos()
         {
+            CarregaCategoria();
             return View();
         }
 
         [HttpPost]
-        public ActionResult CadVeiculos(ModelVeiculo modV, HttpPostedFile file)
+        public ActionResult CadVeiculos(ModelVeiculo modVec, HttpPostedFileBase file, ModelCategoria modCat)
         {
             CarregaCategoria();
-
-            modV.codCat = Request["categoria"];
-
-            // esta dando erro ao anexar imagem /
 
             string arquivo = Path.GetFileName(file.FileName);
             string file2 = "/Imagens/" + Path.GetFileName(file.FileName);
             string _path = Path.Combine(Server.MapPath("~/Imagens"), arquivo);
             file.SaveAs(_path);
-            modV.imagemProd = file2;
-            acV.InserirVeiculo(modV);
+            modVec.imagemProd = file2;
+            modVec.codCat = Request["categorias"];
+            modCat.codCat = Request["categorias"];
+            acV.InserirVeiculo(modVec);
             ViewBag.msg = "Cadastro realizado";
             return RedirectToAction("CadVeiculos", "Home"); // redirecionar para a página CarregaPaciente e finge limpar a tela
         }
 
 
+
+
+
+        public ActionResult DetalharVeiculo(ModelVeiculo modVec)
+        {
+            CarregaVeiculos();
+            return View();
+        }
+
         ///////// tentando inserir seletor por radio button ////////
 
-
-        /*[HttpPost]
-        public ActionResult CadVeiculos(string recebeNome, int recebeOpcao)
-        {
-            try
-            {
-                AcoesVeiculos acVec = new AcoesVeiculos();
-                IQueryable<HomeController> sql;
-                sql = null;
-
-                if (recebeOpcao == 1)
-                {
-                    sql = from c in acVec.InserirVeiculo
-                          where c.nome.StartsWith(recebeNome.Trim())
-                          select c;
-                    TempData["opcao1"] = "nome";
-                }
-                return View(sql.ToList());
-
-            }
-            catch (Exception ex)
-            {
-                TempData["Erro"] = "Erro na gravação dos dados " + ex.Message;
-            }
-
-            return View();
-
-        }*/
 
 
 
         // ------------------ Pagina que carrega os dados ----------------
 
-        public void CarregaProduto()
+        public void CarregaVeiculos()
         {
-            List<SelectListItem> produto = new List<SelectListItem>();
+            List<SelectListItem> veiculo = new List<SelectListItem>();
             using (MySqlConnection con = new MySqlConnection("Server=localhost; DataBase=bdConcessionaria; User=root;pwd=12345678"))
             {
                 con.Open();
@@ -226,7 +219,7 @@ namespace ProjetoQuark.Controllers
 
                 while (rdr.Read())
                 {
-                    produto.Add(new SelectListItem
+                    veiculo.Add(new SelectListItem
                     {
                         Text = rdr[1].ToString(),
                         Value = rdr[0].ToString()
@@ -235,7 +228,7 @@ namespace ProjetoQuark.Controllers
                 con.Close();
                 con.Open();
             }
-            ViewBag.pacientes = new SelectList(produto, "value", "Text");
+            ViewBag.veiculos = new SelectList(veiculo, "value", "Text");
         }
         
 

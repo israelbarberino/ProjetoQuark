@@ -3,11 +3,6 @@
 @{
     ViewBag.Title = "Cadastrar Novo Produto";
 
-    List<string> Cat = new List<string>();
-    Cat.Add("1");
-    Cat.Add("2");
-    Cat.Add("3");
-    Cat.Add("4");
 }
 <h2 style="text-align:center;">Novo produto</h2>
 
@@ -17,21 +12,6 @@
         @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-
-        <!--<h4>Escolha o Produto que deseja cadastrar</h4>
-    <br />
-    <form>
-        <fieldset data-role="controlgroup">
-            <input type="radio" name="recebeOpcao" id="radio-choice-v-2a" value="1">
-            <label for="radio-choice-v-2a">Carro Híbrido</label>
-            <input type="radio" name="recebeOpcao" id="radio-choice-v-2b" value="2">
-            <label for="radio-choice-v-2b">Carro Elétrico</label>
-            <input type="radio" name="recebeOpcao" id="radio-choice-v-2c" value="3">
-            <label for="radio-choice-v-2c">Moto Híbrida</label>
-            <input type="radio" name="recebeOpcao" id="radio-choice-v-2d" value="4">
-            <label for="radio-choice-v-2d">Moto Elétrica</label>
-        </fieldset>
-    </form>-->
 
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -82,34 +62,15 @@
             </div>
         </div>
 
+
         <div class="form-group center">
             <div>
                 @Html.LabelFor(model => model.categoria, htmlAttributes: new { @class = "control-label col-md-2" })
             </div>
             <div class="col-md-10">
-                @Html.DropDownListFor(m => m.categoria, new MultiSelectList(Cat))
-                @Html.ValidationMessageFor(model => model.valorProd, "", new { @class = "text-danger" })
+                @Html.DropDownList("categorias", "Categoria")
             </div>
         </div>
-
-        <!--
-            trecho esta dando erro na chave categoria
-            <div class="form-group center">
-        <div>
-            Html.LabelFor(model => model.categoria, htmlAttributes: new { class = "control-label col-md-2" })
-        </div>
-        <div class="col-md-10">
-             Html.DropDownList("categoria", "Categoria")
-             Html.ValidationMessageFor(model => model.valorProd, "", new { class = "text-danger" })
-        </div>
-    </div>
-
-
-            -->
-
-
-
-
 
 
         <div class="form-group center">

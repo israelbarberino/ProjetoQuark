@@ -13,38 +13,17 @@ namespace ProjetoQuark.Dados
         Conexao con = new Conexao();
         public void InserirVeiculo(ModelVeiculo cm)
         {
-            MySqlCommand cmd = new MySqlCommand("insert into tbProduto (nomeProd, imagemProd, quantidadeProd, valorProd, descricaoProd) values (@nomeProd, @imagemProd, @quantidadeProd, @valorProd, @descricaoProd)", con.MyConectarBD()); // @: PARAMETRO
+            MySqlCommand cmd = new MySqlCommand ("insert into tbProduto (nomeProd, imagemProd, quantidadeProd, valorProd, descricaoProd, codCat) values (@nomeProd, @imagemProd, @quantidadeProd, @valorProd, @descricaoProd, @codCat)", con.MyConectarBD()); // @: PARAMETRO
 
             cmd.Parameters.Add("@nomeProd", MySqlDbType.VarChar).Value = cm.nomeProd;
             cmd.Parameters.Add("@imagemProd", MySqlDbType.VarChar).Value = cm.imagemProd;
             cmd.Parameters.Add("@quantidadeProd", MySqlDbType.VarChar).Value = cm.quantidadeProd;
             cmd.Parameters.Add("@valorProd", MySqlDbType.VarChar).Value = cm.valorProd;
             cmd.Parameters.Add("@descricaoProd", MySqlDbType.VarChar).Value = cm.descricaoProd;
+            cmd.Parameters.Add("@codCat", MySqlDbType.VarChar).Value = cm.codCat;
 
             cmd.ExecuteNonQuery();
             con.MyDesconectarBD();
-        }
-
-        public List<ModelCategoria> CarregaCategoria()
-        {
-            List<ModelCategoria> ListaCategoria = new List<ModelCategoria>();
-
-            MySqlCommand cmd = new MySqlCommand("select * from tbCategoria;", con.MyConectarBD());
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable Categoria = new DataTable();
-            da.Fill(Categoria);
-            con.MyDesconectarBD();
-
-            foreach (DataRow dt in Categoria.Rows)
-            {
-                ListaCategoria.Add(
-                    new ModelCategoria
-                    {
-                        codCat = Convert.ToString(dt["codCat"]),
-                        categoria = Convert.ToString(dt["Categoria"]),
-                    });
-            }
-            return ListaCategoria;
         }
 
 
@@ -259,6 +238,41 @@ namespace ProjetoQuark.Dados
             }
             return Produtoslist;
         }
+
+        public bool DeleteProduto(int id)
+        {
+            MySqlCommand cmd = new MySqlCommand("delete from tbProduto where codProd=@id", con.MyConectarBD());
+            cmd.Parameters.AddWithValue("@id", id);
+
+            int i = cmd.ExecuteNonQuery();
+            con.MyDesconectarBD();
+
+            if (i >= 1)
+                return true;
+            else
+                return false;
+        }
+
+        public bool AtualizaVeiculo(ModelVeiculo cm)
+        {
+            MySqlCommand cmd = new MySqlCommand("update tbProduto set nomeProd=@nomeProd, quantidadeProd=@quantidadeProd, valorProd=@valorProd, descricaoProd=@descricaoProd where codProd=@codProd", con.MyConectarBD());
+
+
+            cmd.Parameters.AddWithValue("@nomeProd", cm.nomeProd);
+            cmd.Parameters.AddWithValue("@quantidadeProd", cm.quantidadeProd);
+            cmd.Parameters.AddWithValue("@valorProd", cm.valorProd);
+            cmd.Parameters.AddWithValue("@descricaoProd", cm.descricaoProd);
+            cmd.Parameters.AddWithValue("@codProd", cm.codProd);
+
+            int i = cmd.ExecuteNonQuery();
+            con.MyDesconectarBD();
+
+            if (i >= 1)
+                return true;
+            else
+                return false;
+        }
+
 
     }
 }
