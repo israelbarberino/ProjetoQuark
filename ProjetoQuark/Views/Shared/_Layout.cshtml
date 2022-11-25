@@ -24,9 +24,29 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre nós", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Motocicletas <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Motos Elétricas", "ConsultaMotoEletrica", "Home")</li>
+                            <li>@Html.ActionLink("Motos Híbridas", "ConsultaMotoHibrida", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Carros <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("100% Elétricos", "ConsultaCarroEletrico", "Home")</li>
+                            <li>@Html.ActionLink("Híbridos", "ConsultaCarroHibrido", "Home")</li>
+                        </ul>
+                    </li>
 
+                    <li>@Html.ActionLink("Sobre nós", "About", "Home")</li>
+                    <li>@Html.ActionLink("Nosa Loja", "Contact", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     @if (Session["tipoLogado2"] != null)
                     {
                         <li>
@@ -34,32 +54,23 @@
                                 Cadastrar <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Cliente", "CadCliente", "Home")</li>
-                                <li>@Html.ActionLink("Veículo", "CadVeiculo", "Home")</li>
-                                <li>@Html.ActionLink("Motocicleta", "CadMotocicleta", "Home")</li>
+
+                                <li>@Html.ActionLink("Veículos", "CadVeiculos", "Home")</li>
+
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Nossos produtos <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Veículos", "ConsultaVeiculos", "Home")</li>
-                                <li>@Html.ActionLink("Motocicletas", "ConsultaMotocicleta", "Home")</li>
-                            </ul>
-                        </li>
+
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Clientes <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Cadastrar cliente", "CadCliente", "Home")</li>
-                                <li>@Html.ActionLink("Lista de clientes", "ConsultaClientes", "Home")</li>
+                                <li>@Html.ActionLink("Cadastrar cliente", "CadLogin", "Adm")</li>
+                                <li>@Html.ActionLink("Lista de clientes", "ListarClientes", "Home")</li>
                             </ul>
                         </li>
                     }
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
+
                     @if (Session["usuariologado"] == null || Session["senhaLogado"] == null)
                     {
                         <li>@Html.ActionLink("Login", "Login", "Home")</li>

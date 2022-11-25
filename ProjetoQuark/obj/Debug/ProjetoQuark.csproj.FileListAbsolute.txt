@@ -190,3 +190,198 @@ C:\Users\iluiz\OneDrive\Área de Trabalho\ProjetoQuark\ProjetoQuark\obj\Debug\Pr
 C:\Users\iluiz\OneDrive\Área de Trabalho\ProjetoQuark\ProjetoQuark\obj\Debug\ProjetoQuark.csproj.CopyComplete
 C:\Users\iluiz\OneDrive\Área de Trabalho\ProjetoQuark\ProjetoQuark\obj\Debug\ProjetoQuark.dll
 C:\Users\iluiz\OneDrive\Área de Trabalho\ProjetoQuark\ProjetoQuark\obj\Debug\ProjetoQuark.pdb
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\ProjetoQuark.dll.config
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\ProjetoQuark.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\ProjetoQuark.pdb
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\csc.exe
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\csc.exe.config
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\csc.rsp
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\csi.exe
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\csi.exe.config
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\csi.rsp
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.AppContext.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Console.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.Compression.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Net.Http.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.ValueTuple.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\vbc.exe
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\vbc.exe.config
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\vbc.rsp
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\VBCSCompiler.exe
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Antlr3.Runtime.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\MySql.Data.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Newtonsoft.Json.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Helpers.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Mvc.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Optimization.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Razor.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Razor.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\WebGrease.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Google.Protobuf.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\ZstdNet.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\BouncyCastle.Crypto.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Ubiety.Dns.Core.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Memory.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Buffers.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\K4os.Compression.LZ4.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\K4os.Hash.xxHash.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Numerics.Vectors.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\MySql.Data.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Helpers.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Mvc.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Optimization.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.Razor.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Razor.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Newtonsoft.Json.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Antlr3.Runtime.pdb
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.csproj.AssemblyReference.cache
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.csproj.CoreCompileInputs.cache
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.dll
+C:\Users\Cliente - MagaInfo\OneDrive\Área de Trabalho\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.pdb
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\ProjetoQuark.dll.config
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\ProjetoQuark.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\ProjetoQuark.pdb
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\csc.exe
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\csc.exe.config
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\csc.rsp
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\csi.exe
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\csi.exe.config
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\csi.rsp
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.AppContext.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Console.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.Compression.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Net.Http.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Net.Sockets.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.ValueTuple.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.XPath.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\vbc.exe
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\vbc.exe.config
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\vbc.rsp
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\VBCSCompiler.exe
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Antlr3.Runtime.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\MySql.Data.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Newtonsoft.Json.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Helpers.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Mvc.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Optimization.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Razor.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Deployment.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Razor.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\WebGrease.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Google.Protobuf.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\ZstdNet.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\BouncyCastle.Crypto.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Ubiety.Dns.Core.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Memory.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Buffers.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\K4os.Compression.LZ4.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\K4os.Hash.xxHash.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Numerics.Vectors.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\MySql.Data.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Helpers.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Mvc.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Optimization.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.Razor.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Deployment.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\System.Web.WebPages.Razor.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Newtonsoft.Json.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Antlr3.Runtime.pdb
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.csproj.AssemblyReference.cache
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.csproj.CoreCompileInputs.cache
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.csproj.CopyComplete
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.dll
+C:\Users\iluiz\OneDrive\Área de Trabalho\Quark-2.0\Quark-1.0\ProjetoQuark\obj\Debug\ProjetoQuark.pdb

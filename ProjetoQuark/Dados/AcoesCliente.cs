@@ -3,13 +3,12 @@ using ProjetoQuark.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Web;
 
 namespace ProjetoQuark.Dados
 {
-    public class AcoesLogin
+    public class AcoesCliente
     {
         Conexao con = new Conexao();
 
@@ -49,9 +48,9 @@ namespace ProjetoQuark.Dados
             con.MyDesconectarBD();
         }
 
-        public void InserirLogin(ModelLogin cm)
+        public void InserirCliente(ModelCliente cm)
         {
-            MySqlCommand cmd = new MySqlCommand("insert into tbLogin (usuario, senha, tipo, nomeCli, emailCli) values (@usuario, @senha, 1, @nomeCli, @emailCli)", con.MyConectarBD()); // @: PARAMETRO
+            MySqlCommand cmd = new MySqlCommand("insert into tbLogin (usuario, senha, tipo, nomeCli, emailCli) values ('usuario', @senha, '1', @nomeCli, @emailCli)", con.MyConectarBD()); // @: PARAMETRO
 
             cmd.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = cm.usuario;
             cmd.Parameters.Add("@senha", MySqlDbType.VarChar).Value = cm.senha;
@@ -62,17 +61,6 @@ namespace ProjetoQuark.Dados
             cmd.ExecuteNonQuery();
             con.MyDesconectarBD();
         }
-
-        public DataTable CarregaLogin()
-        {
-            MySqlCommand cmd = new MySqlCommand("select * from tbLogin", con.MyConectarBD());
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable Login = new DataTable();
-            da.Fill(Login);
-            con.MyDesconectarBD();
-            return Login;
-        }
-
         public List<ModelLogin> GetUsuario()
         {
             List<ModelLogin> LoginList = new List<ModelLogin>();

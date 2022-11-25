@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProjetoQuark.Models.ModelLogin>
+
+<h2 style="text-align:center; margin-top:200px;">Clientes Cadastrados</h2>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeCli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailCli)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeCli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emailCli)
+            </td>
+        </tr>
+    }
+    
+    <!-- INSERIR BOTÂO EXCLUIR / EDITAR -->
+
+    
+</table>
+
+
+
+<br />
+<br />
+@Html.ActionLink("Voltar", "Home")

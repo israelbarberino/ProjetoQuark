@@ -1,7 +1,7 @@
 create database bdConcessionaria;
 use bdConcessionaria;
 
-drop database bdConcessionaria;
+-- drop database bdConcessionaria;
 
 -- Criando as tabelas do banco de dados
 
@@ -11,8 +11,6 @@ usuario varchar(50) unique,
 senha varchar(20),
 tipo int
 );
-
-drop table tbLogin;
 
 create table tbCliente(
 codCli int primary key auto_increment,
@@ -46,6 +44,7 @@ alter table tbProduto rename column descricacaoProd to descricaoProd;
 
 drop view vw_veiculos;
 
+drop view if exists vw_veiculos;
 create view vw_veiculos as
 select	t1.codProd,
 		t1.nomeProd,
@@ -54,7 +53,7 @@ select	t1.codProd,
         t1.valorProd,
         t1.descricaoProd,
         t1.codCat,
-        t2.nomeCat
+        t2.categoria
 from tbProduto t1
 inner join tbCategoria t2 on t1.codCat = t2.codCat;
 
@@ -68,12 +67,23 @@ insert into tbProduto (codProd, nomeProd, imagemProd, quantidadeProd, valorProd,
 insert into tbProduto (codProd, nomeProd, imagemProd, quantidadeProd, valorProd, descricaoProd, codCat) values (default, 'Kawazaki Ninja', '123456789.jpg', 4, '110000', '2022/2022 Completo', 3); 
 insert into tbProduto (codProd, nomeProd, imagemProd, quantidadeProd, valorProd, descricaoProd, codCat) values (default, 'Voltz', '123456789.jpg', 6, '180000', '2022/2022 Completo', 4); 
 
-
 select * from vw_veiculos where codCat <= 2;
 select * from vw_veiculos where codCat >= 3;
 
 insert into tbLogin values (default, 'admin', '123456', 2);
 
 select * from tbLogin;
+select * from tbCategoria;
+select * from tbProduto;
+select * from tbCliente;
 
 alter table tbCategoria rename column nomeCat to categoria;
+
+alter table tbLogin add nomeCli varchar(100);
+alter table tbLogin add emailCli varchar(100);
+
+alter table tbLogin modify column usuario varchar(50);
+
+delete from tbLogin where codUsu > 0;
+
+insert into tbLogin values (default, 'adm', '123456', 2, 'administrador', 'adm@adm.com');

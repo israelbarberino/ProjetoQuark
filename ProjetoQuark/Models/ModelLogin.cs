@@ -14,6 +14,7 @@ namespace ProjetoQuark.Models
         [StringLength(15, ErrorMessage = "Nome de usuário deve conter entre {2} e {1} caracteres.", MinimumLength = 3)]
         public string usuario { get; set; }
 
+
         [Required]
         [DataType(DataType.Password)]
         [StringLength(8, MinimumLength = 4)]
@@ -22,6 +23,15 @@ namespace ProjetoQuark.Models
 
         [DisplayName("Defina: 1 - para usuário comum ou 2 - para administrador")]
         public string tipo { get; set; }
+        
+        [Required]
+        [Display(Name = "Nome")]
+        public string nomeCli { get; set; }
+
+        [Required]
+        [Display(Name = "E-mail")]
+        public string emailCli { get; set; }
+
 
     }
 }

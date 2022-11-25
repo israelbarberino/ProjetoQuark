@@ -1,10 +1,47 @@
-﻿
+﻿@model IEnumerable<ProjetoQuark.Models.ModelVeiculo>
+
 @{
-    ViewBag.Title = "ConsultaCarros";
+    ViewBag.Title = "Quark | Ser elétrico é elementar";
 }
+<div class="">
+    <div class="row center">
+        <div class="col-lg-9">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-3 col-md-6 mb-4" style="margin:2% 4%">
+                        <div class="card h-100">
+                            <a href="/Produto/Detalhes/@item.codProd">
+                                @if (@item.imagemProd != null)
+                                {<img class="card-img-right flex-auto d-none d-md-block" data-src=" " alt="Thumbnail [300x300]" style="width: 300px; height: 300px;" src="@item.imagemProd" data-holder-rendered="true">}
+                                else
+                                {<img class="card-img-right flex-auto d-none d-md-block" data-src=" " alt="Thumbnail [300x300]" style="width: 300px; height: 300px;" src="~/Images/image-not-found.jpg" data-holder-rendered="true">}
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="@item.imagemProd">@item.nomeProd</a>
+                                </h4>
+                                <h5>R$ @item.valorProd</h5>
+                            </div>
+                            <div class="card-footer space-between-flex" style="width:90%">
+                                <div>
+                                    @Html.ActionLink("Descubra mais", "Detalhes", "Produto", new { id = item.codProd }, new { @class = "btn btn-default btn-acao" })
+                                </div>
+                                <div>
+                                    @using (Html.BeginForm("Comprar", "Home", FormMethod.Post))
+                                    {
+                                        <input type="hidden" name="id" value=@item.codProd>
+                                        <input type="hidden" name="pre" value=@item.valorProd>
+                                        <input type="hidden" name="quantidade" value="1">
+                                        <button type="submit" class="btn btn-default btn-acao-primario">Comprar</button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>ConsultaCarros</h2>
-
-@Html.Raw(ViewBag.GridViewString)
-
-@Html.ActionLink("Voltar", "Index", "Home")

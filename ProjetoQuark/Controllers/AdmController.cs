@@ -16,6 +16,9 @@ namespace ProjetoQuark.Controllers
     {
         // GET: Adm
         AcoesLogin acLog = new AcoesLogin();
+        AcoesCliente AcCli = new AcoesCliente();
+
+
         public ActionResult CadLogin()
         {
             return View();
@@ -26,7 +29,21 @@ namespace ProjetoQuark.Controllers
         {
             acLog.InserirLogin(modLog);
 
-            return RedirectToAction("CadLogin", "Adm");
+            return RedirectToAction("Login", "Home");
+        }
+
+        public ActionResult CadCliente()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult CadCliente(ModelCliente modCli)
+        {
+            AcCli.InserirCliente(modCli);
+
+            return RedirectToAction("Login", "Home");
         }
 
         public void CarregaLogin()
@@ -63,5 +80,6 @@ namespace ProjetoQuark.Controllers
             ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
             return View();
         }
+
     }
 }

@@ -9,13 +9,16 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.Web.UI;
+using System.Security.Cryptography;
 
 namespace ProjetoQuark.Controllers
 {
+    // Criando instancias --------------------------
     public class HomeController : Controller
     {
         AcoesLogin acLg = new AcoesLogin();
-        AcoesProduto acV = new AcoesProduto();
+        AcoesVeiculos acV = new AcoesVeiculos();
+        AcoesCliente acC = new AcoesCliente();
 
 
         /* ------- CONTROLE DE ACESSO - LOGIN LOGOUT   ---------- */
@@ -79,21 +82,29 @@ namespace ProjetoQuark.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
         /* ------- CONTROLES DO USUARIO LOGADO   ---------- */
 
         /*FAZER UM CONTROLE DE LOGIN E USUSRIO AQUI */
+
+        public ActionResult ListarClientes()
+        {
+            if (Session["usuarioLogado"] == null || Session["senhaLogado"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return View(acC.GetUsuario());
+            }
+        }
 
 
         /* ------- CONTROLES DO ADMINISTRADOR DO SISTEMA - ACESSO RESTRITO   ---------- */
@@ -117,18 +128,92 @@ namespace ProjetoQuark.Controllers
             }
         }
 
+        // ------------------ CADASTRO DE VEICULOS - SISTEMA DE CARREGAR OS DADOS PARA CADASTRO ---------------- //
+
+        public void CarregaCategoria()
+        {
+            List<SelectListItem> categoria = new List<SelectListItem>();
+            using (MySqlConnection con = new MySqlConnection("Server=localhost; DataBase=bdConcessionaria; User=root;pwd=12345678"))
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from tbCategoria", con);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    categoria.Add(new SelectListItem
+                    {
+                        Text = rdr[1].ToString(),
+                        Value = rdr[0].ToString()
+                    });
+                }
+                con.Close();
+                con.Open();
+            }
+            ViewBag.categoria = new SelectList(categoria, "value", "Text");
+
+        }
+
+
         public ActionResult CadVeiculos()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult CadVeiculos(ModelProduto modProd)
+        public ActionResult CadVeiculos(ModelVeiculo modV, HttpPostedFile file)
         {
-            acV.InserirVeiculo(modProd);
-            ViewBag.mssge = "Cadastro efetuado com sucesso!";
+            CarregaCategoria();
+
+            modV.codCat = Request["categoria"];
+
+            // esta dando erro ao anexar imagem /
+
+            string arquivo = Path.GetFileName(file.FileName);
+            string file2 = "/Imagens/" + Path.GetFileName(file.FileName);
+            string _path = Path.Combine(Server.MapPath("~/Imagens"), arquivo);
+            file.SaveAs(_path);
+            modV.imagemProd = file2;
+            acV.InserirVeiculo(modV);
+            ViewBag.msg = "Cadastro realizado";
             return RedirectToAction("CadVeiculos", "Home"); // redirecionar para a página CarregaPaciente e finge limpar a tela
         }
+
+
+        ///////// tentando inserir seletor por radio button ////////
+
+
+        /*[HttpPost]
+        public ActionResult CadVeiculos(string recebeNome, int recebeOpcao)
+        {
+            try
+            {
+                AcoesVeiculos acVec = new AcoesVeiculos();
+                IQueryable<HomeController> sql;
+                sql = null;
+
+                if (recebeOpcao == 1)
+                {
+                    sql = from c in acVec.InserirVeiculo
+                          where c.nome.StartsWith(recebeNome.Trim())
+                          select c;
+                    TempData["opcao1"] = "nome";
+                }
+                return View(sql.ToList());
+
+            }
+            catch (Exception ex)
+            {
+                TempData["Erro"] = "Erro na gravação dos dados " + ex.Message;
+            }
+
+            return View();
+
+        }*/
+
+
+
+        // ------------------ Pagina que carrega os dados ----------------
 
         public void CarregaProduto()
         {
@@ -152,73 +237,48 @@ namespace ProjetoQuark.Controllers
             }
             ViewBag.pacientes = new SelectList(produto, "value", "Text");
         }
+        
 
-        public ActionResult ConsultaCarros(ModelProduto modProd)
+        // ---------------------- CONSULTAS  ---------------------- //
+        public ActionResult ConsultaCarros()
         {
-            GridView dgv = new GridView(); // Instância para a tabela
-            dgv.DataSource = acV.CarregaCarros(); //Atribuir ao grid o resultado da consulta
-            dgv.DataBind(); //Confirmação do Grid
-            StringWriter sw = new StringWriter(); //Comando para construção do Grid na tela
-            HtmlTextWriter htw = new HtmlTextWriter(sw); //Comando para construção do Grid na tela
-            dgv.RenderControl(htw); //Comando para construção do Grid na tela
-            ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
-            return View();
+            return View(acV.GetCarros());
         }
-        public ActionResult ConsultaMotos(ModelProduto modProd)
+
+        public ActionResult ConsultaCarroHibrido()
         {
-            GridView dgv = new GridView(); // Instância para a tabela
-            dgv.DataSource = acV.CarregaMotos(); //Atribuir ao grid o resultado da consulta
-            dgv.DataBind(); //Confirmação do Grid
-            StringWriter sw = new StringWriter(); //Comando para construção do Grid na tela
-            HtmlTextWriter htw = new HtmlTextWriter(sw); //Comando para construção do Grid na tela
-            dgv.RenderControl(htw); //Comando para construção do Grid na tela
-            ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
-            return View();
+            return View(acV.GetCarroHibrido());
         }
-        public ActionResult ConsultaCarroEletrico(ModelProduto modProd)
+
+        public ActionResult ConsultaCarroEletrico()
         {
-            GridView dgv = new GridView(); // Instância para a tabela
-            dgv.DataSource = acV.CarregaCarroEletrico(); //Atribuir ao grid o resultado da consulta
-            dgv.DataBind(); //Confirmação do Grid
-            StringWriter sw = new StringWriter(); //Comando para construção do Grid na tela
-            HtmlTextWriter htw = new HtmlTextWriter(sw); //Comando para construção do Grid na tela
-            dgv.RenderControl(htw); //Comando para construção do Grid na tela
-            ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
-            return View();
+            return View(acV.GetCarroEletrico());
         }
-        public ActionResult ConsultaCarroHibrido(ModelProduto modProd)
+
+        public ActionResult ConsultaMotos()
         {
-            GridView dgv = new GridView(); // Instância para a tabela
-            dgv.DataSource = acV.CarregaCarroHibrido(); //Atribuir ao grid o resultado da consulta
-            dgv.DataBind(); //Confirmação do Grid
-            StringWriter sw = new StringWriter(); //Comando para construção do Grid na tela
-            HtmlTextWriter htw = new HtmlTextWriter(sw); //Comando para construção do Grid na tela
-            dgv.RenderControl(htw); //Comando para construção do Grid na tela
-            ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
-            return View();
+            return View(acV.GetMotos());
         }
-        public ActionResult ConsultaMotoEletrica(ModelProduto modProd)
+
+        public ActionResult ConsultaMotoEletrica()
         {
-            GridView dgv = new GridView(); // Instância para a tabela
-            dgv.DataSource = acV.CarregaMotoEletrica(); //Atribuir ao grid o resultado da consulta
-            dgv.DataBind(); //Confirmação do Grid
-            StringWriter sw = new StringWriter(); //Comando para construção do Grid na tela
-            HtmlTextWriter htw = new HtmlTextWriter(sw); //Comando para construção do Grid na tela
-            dgv.RenderControl(htw); //Comando para construção do Grid na tela
-            ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
-            return View();
+            return View(acV.GetMotoEletrica());
         }
-        public ActionResult ConsultaMotoHibrida(ModelProduto modProd)
+
+        public ActionResult ConsultaMotoHibrida()
         {
-            GridView dgv = new GridView(); // Instância para a tabela
-            dgv.DataSource = acV.CarregaMotoHibrida(); //Atribuir ao grid o resultado da consulta
-            dgv.DataBind(); //Confirmação do Grid
-            StringWriter sw = new StringWriter(); //Comando para construção do Grid na tela
-            HtmlTextWriter htw = new HtmlTextWriter(sw); //Comando para construção do Grid na tela
-            dgv.RenderControl(htw); //Comando para construção do Grid na tela
-            ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
-            return View();
+            return View(acV.GetMotoHibrida());
         }
+
+
+        // carrega as listas
+       
+
+        public ActionResult ListarMotocicletas()
+        {
+            return View(acV.GetCategoria());
+        }
+
 
     }
 }

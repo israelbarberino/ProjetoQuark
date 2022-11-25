@@ -123,15 +123,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Dados\AcoesCliente.cs" />
     <Compile Include="Dados\AcoesLogin.cs" />
-    <Compile Include="Dados\AcoesProduto.cs" />
+    <Compile Include="Dados\AcoesVeiculos.cs" />
     <Compile Include="Dados\Conexao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelCategoria.cs" />
+    <Compile Include="Models\ModelCliente.cs" />
     <Compile Include="Models\ModelLogin.cs" />
-    <Compile Include="Models\ModelProduto.cs" />
+    <Compile Include="Models\ModelVeiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +177,13 @@
     <Content Include="Views\Home\semAcesso.cshtml" />
     <Content Include="Views\Adm\CadLogin.cshtml" />
     <Content Include="Views\Home\ConsultaCarros.cshtml" />
+    <Content Include="Views\Home\ConsultaCarroHibrido.cshtml" />
     <Content Include="Views\Home\ConsultaCarroEletrico.cshtml" />
+    <Content Include="Views\Home\ConsultaMotos.cshtml" />
+    <Content Include="Views\Home\ConsultaMotoEletrica.cshtml" />
+    <Content Include="Views\Home\ConsultaMotoHibrida.cshtml" />
+    <Content Include="Views\Home\ListarClientes.cshtml" />
+    <Content Include="Views\Adm\CadCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,15 +1,12 @@
-﻿@model ProjetoQuark.Models.ModelLogin
+﻿@model ProjetoQuark.Models.ModelCliente
 @{
-    ViewBag.Title = "CadLogin";
+    ViewBag.Title = "CadCliente";
 
-    List<string> Tipo = new List<string>();
-    Tipo.Add("1");
-    Tipo.Add("2");
 }
 
 <h2>Cadastro de Usuario</h2>
 
-@using (Html.BeginForm("CadLogin", "Adm", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("CadCliente", "Adm", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.LabelFor(m => m.nomeCli)
     <br />
@@ -32,12 +29,6 @@
     @Html.LabelFor(m => m.senha)
     <br />
     @Html.EditorFor(m => m.senha)
-    <br />
-    <br />
-
-    @Html.LabelFor(m => m.tipo)
-    <br />
-    @Html.DropDownListFor(m => m.tipo, new MultiSelectList(Tipo))
     <br />
     <br />
 
