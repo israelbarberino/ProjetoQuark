@@ -196,6 +196,8 @@
     <Content Include="Views\Home\Carrinho.cshtml" />
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Home\DetalhaProduto.cshtml" />
+    <Content Include="Views\Home\DeletaProduto.cshtml" />
+    <Content Include="Views\Home\AtualizaProduto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

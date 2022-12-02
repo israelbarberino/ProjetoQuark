@@ -1,0 +1,53 @@
+﻿
+@model ProjetoQuark.Models.ModelVeiculo
+
+@{
+    ViewBag.Title = "Excluindo produto";
+}
+
+<h3>Deseja excluir <u>permanentemente</u> estes dados?</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.codProd)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nomeProd)
+            @Html.DisplayFor(model => model.nomeProd)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descricaoProd)
+            @Html.DisplayFor(model => model.descricaoProd)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.valorProd)
+            @Html.DisplayFor(model => model.valorProd)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.quantidadeProd)
+            @Html.DisplayFor(model => model.quantidadeProd)
+        </div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar à Lista", "ListarVeiculos", "Home")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

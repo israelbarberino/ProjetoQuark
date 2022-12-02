@@ -384,6 +384,9 @@ namespace ProjetoQuark.Controllers
             return View();
         }
 
+
+        //------------------- DETALHA - EDITA - EXCLUI PRODUTOS ---------------------//
+
         public ActionResult DetalhaProduto(string id)
         {
 
@@ -391,7 +394,32 @@ namespace ProjetoQuark.Controllers
         }
 
 
+        public ActionResult AtualizaProduto(string id)
+        {
 
+            return View(acV.GetTodosVeiculos().Find((smodel => smodel.codProd == id)));
+        }
+
+        [HttpPost]
+        public ActionResult AtualizaProduto(ModelVeiculo modV)
+        {
+            acV.AtualizaVeiculo(modV);
+            return RedirectToAction("ListarVeiculos");
+        }
+
+
+        public ActionResult DeletaProduto(string id)
+        {
+            return View(acV.GetTodosVeiculos().Find((smodel => smodel.codProd == id)));
+        }
+
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeletaProduto(int id)
+        {
+            acV.DeleteProduto(id);
+            return RedirectToAction("ListarVeiculos");
+        }
 
 
 

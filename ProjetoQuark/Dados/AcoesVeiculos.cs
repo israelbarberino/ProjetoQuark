@@ -281,7 +281,6 @@ namespace ProjetoQuark.Dados
         {
             MySqlCommand cmd = new MySqlCommand("update tbProduto set nomeProd=@nomeProd, quantidadeProd=@quantidadeProd, valorProd=@valorProd, descricaoProd=@descricaoProd where codProd=@codProd", con.MyConectarBD());
 
-
             cmd.Parameters.AddWithValue("@nomeProd", cm.nomeProd);
             cmd.Parameters.AddWithValue("@quantidadeProd", cm.quantidadeProd);
             cmd.Parameters.AddWithValue("@valorProd", cm.valorProd);
