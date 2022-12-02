@@ -11,6 +11,8 @@ using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Security.Cryptography;
 using System.Web.Services.Description;
+using System.Web.Security;
+using System.Web.ModelBinding;
 
 namespace ProjetoQuark.Controllers
 {
@@ -21,7 +23,8 @@ namespace ProjetoQuark.Controllers
         AcoesVeiculos acV = new AcoesVeiculos();
         AcoesCliente acC = new AcoesCliente();
         AcoesCategoria acCat = new AcoesCategoria();
-
+        AcoesVenda acVend = new AcoesVenda();
+        AcoesItem acI = new AcoesItem();
 
         /* ------- CONTROLE DE ACESSO - LOGIN LOGOUT   ---------- */
 
@@ -108,6 +111,17 @@ namespace ProjetoQuark.Controllers
             }
         }
 
+        public ActionResult ListarVeiculos()
+        {
+            if (Session["usuarioLogado"] == null || Session["senhaLogado"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return View(acV.GetTodosVeiculos());
+            }
+        }
 
         /* ------- CONTROLES DO ADMINISTRADOR DO SISTEMA - ACESSO RESTRITO   ---------- */
         public ActionResult Adm()
@@ -191,19 +205,11 @@ namespace ProjetoQuark.Controllers
             return RedirectToAction("CadVeiculos", "Home"); // redirecionar para a página CarregaPaciente e finge limpar a tela
         }
 
-
-
-
-
         public ActionResult DetalharVeiculo(ModelVeiculo modVec)
         {
             CarregaVeiculos();
             return View();
         }
-
-        ///////// tentando inserir seletor por radio button ////////
-
-
 
 
         // ------------------ Pagina que carrega os dados ----------------
@@ -230,7 +236,7 @@ namespace ProjetoQuark.Controllers
             }
             ViewBag.veiculos = new SelectList(veiculo, "value", "Text");
         }
-        
+
 
         // ---------------------- CONSULTAS  ---------------------- //
         public ActionResult ConsultaCarros()
@@ -264,14 +270,161 @@ namespace ProjetoQuark.Controllers
         }
 
 
-        // carrega as listas
-       
+        // ---------------------- CARRINHO, EDITAR, EXCLUIR PRODUTOS  ---------------------- //
 
-        public ActionResult ListarMotocicletas()
+        public static string codigo;
+
+        public ActionResult AdicionarCarrinho(int id, double valor)
         {
-            return View(acV.GetCategoria());
+
+            ModelVenda carrinho = Session["Carrinho"] != null ? (ModelVenda)Session["Carrinho"] : new ModelVenda();
+            var produto = acV.GetConsProd(id);
+            codigo = id.ToString();
+
+            ModelVeiculo prod = new ModelVeiculo();
+
+            if (produto != null)
+            {
+                var itemPedido = new ModelItemCarrinho();
+                itemPedido.ItemPedidoID = Guid.NewGuid();
+                itemPedido.ProdutoID = id.ToString();
+                itemPedido.Produto = produto[0].nomeProd;
+                itemPedido.Qtd = 1;
+                itemPedido.valorUnit = valor;
+
+                List<ModelItemCarrinho> x = carrinho.ItensPedido.FindAll(l => l.Produto == itemPedido.Produto);
+
+                if (x.Count != 0)
+                {
+                    carrinho.ItensPedido.FirstOrDefault(p => p.Produto == produto[0].nomeProd).Qtd += 1;
+                    itemPedido.valorParcial = itemPedido.Qtd * itemPedido.valorUnit;
+                    carrinho.ValorTotal += itemPedido.valorParcial;
+                    carrinho.ItensPedido.FirstOrDefault(p => p.Produto == produto[0].nomeProd).valorParcial = carrinho.ItensPedido.FirstOrDefault(p => p.Produto == produto[0].nomeProd).Qtd * itemPedido.valorUnit;
+
+                }
+
+                else
+                {
+                    itemPedido.valorParcial = itemPedido.Qtd * itemPedido.valorUnit;
+                    carrinho.ValorTotal += itemPedido.valorParcial;
+                    carrinho.ItensPedido.Add(itemPedido);
+                }
+
+                /*carrinho.ValorTotal = carrinho.ItensPedido.Select(i => i.Produto).Sum(d => d.Valor);*/
+
+                Session["Carrinho"] = carrinho;
+            }
+
+            return RedirectToAction("Carrinho");
+        }
+
+        public ActionResult Carrinho()
+        {
+            ModelVenda carrinho = Session["Carrinho"] != null ? (ModelVenda)Session["Carrinho"] : new ModelVenda();
+
+            return View(carrinho);
+        }
+
+        public ActionResult ExcluirItem(Guid id)
+        {
+            var carrinho = Session["Carrinho"] != null ? (ModelVenda)Session["Carrinho"] : new ModelVenda();
+            var itemExclusao = carrinho.ItensPedido.FirstOrDefault(i => i.ItemPedidoID == id);
+
+            carrinho.ValorTotal -= itemExclusao.valorParcial;
+
+            carrinho.ItensPedido.Remove(itemExclusao);
+
+            Session["Carrinho"] = carrinho;
+            return RedirectToAction("Carrinho");
+        }
+
+        public ActionResult SalvarCarrinho(ModelVenda x)
+        {
+
+            if ((Session["usuarioLogado"] == null) || (Session["senhaLogado"] == null))
+
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            else
+            {
+                /*var carrinho = Session["Carrinho"] != null ? (ModelVenda)Session["Carrinho"] : new ModelVenda();
+
+                ModelVenda md = new ModelVenda();
+                ModelItemCarrinho mdV = new ModelItemCarrinho();
+
+                md.DtVenda = DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy");
+                md.UsuarioID = Session["codUsu"].ToString();
+                md.ValorTotal = carrinho.ValorTotal;
+
+                acVend.InserirVenda(md);
+
+
+                acVend.BuscaIdVenda(x);
+
+                for (int i = 0; i < carrinho.ItensPedido.Count; i++)
+                {
+
+                    mdV.PedidoID = x.codVenda;
+                    mdV.ProdutoID = carrinho.ItensPedido[i].ProdutoID;
+                    mdV.Qtd = carrinho.ItensPedido[i].Qtd;
+                    mdV.valorParcial = carrinho.ItensPedido[i].valorParcial;
+                    acI.InserirItem(mdV);
+                }
+
+                carrinho.ValorTotal = 0;
+                carrinho.ItensPedido.Clear();*/
+
+                return RedirectToAction("confVenda");
+            }
+        }
+
+        public ActionResult confVenda()
+        {
+            return View();
+        }
+
+        public ActionResult DetalhaProduto(string id)
+        {
+
+            return View(acV.GetTodosVeiculos().Find((smodel => smodel.codProd == id)));
         }
 
 
+
+
+
+
+        // ---------------------- COMPRA EFETUADA  ---------------------- //
+
+
+
+        public ActionResult Index2()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index2(ModelLogin verLogin)
+        {
+            acLg.TestarUsuario(verLogin);
+
+            if (verLogin.emailCli != null && verLogin.senha != null)
+            {
+                FormsAuthentication.SetAuthCookie(verLogin.emailCli, false);
+                Session["usuarioLogado"] = verLogin.emailCli.ToString();
+                Session["senhaLogado"] = verLogin.senha.ToString();
+
+                return RedirectToAction("Carrinho", "Home");
+            }
+
+            else
+            {
+                ViewBag.msgLogar = "Usuário não encontrado. Verifique o nome do usuário e a senha";
+                return View();
+
+            }
+
+        }
     }
 }

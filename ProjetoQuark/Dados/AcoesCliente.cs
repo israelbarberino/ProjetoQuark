@@ -61,6 +61,8 @@ namespace ProjetoQuark.Dados
             cmd.ExecuteNonQuery();
             con.MyDesconectarBD();
         }
+
+
         public List<ModelLogin> GetUsuario()
         {
             List<ModelLogin> LoginList = new List<ModelLogin>();

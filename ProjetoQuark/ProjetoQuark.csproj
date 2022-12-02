@@ -125,16 +125,21 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Dados\AcoesCategoria.cs" />
     <Compile Include="Dados\AcoesCliente.cs" />
+    <Compile Include="Dados\AcoesItem.cs" />
     <Compile Include="Dados\AcoesLogin.cs" />
     <Compile Include="Dados\AcoesVeiculos.cs" />
+    <Compile Include="Dados\AcoesVenda.cs" />
     <Compile Include="Dados\Conexao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelCarrinho.cs" />
     <Compile Include="Models\ModelCategoria.cs" />
     <Compile Include="Models\ModelCliente.cs" />
+    <Compile Include="Models\ModelItemCarrinho.cs" />
     <Compile Include="Models\ModelLogin.cs" />
     <Compile Include="Models\ModelVeiculo.cs" />
+    <Compile Include="Models\ModelVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +191,11 @@
     <Content Include="Views\Home\ListarClientes.cshtml" />
     <Content Include="Views\Adm\CadCliente.cshtml" />
     <Content Include="Views\Home\ConsultaCategoria.cshtml" />
+    <Content Include="Views\Home\ListarVeiculos.cshtml" />
+    <Content Include="Views\Home\confVenda.cshtml" />
+    <Content Include="Views\Home\Carrinho.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Home\DetalhaProduto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

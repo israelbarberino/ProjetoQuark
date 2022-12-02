@@ -37,7 +37,7 @@ foreign key (codCat) references tbCategoria(codCat)
 
 -- --------------------------------------------------------------------------------
 -- -----------------------    A T E N Ç Ã O ! ! !    ------------------------------
--- ---------  INSERÇÕES E ALTERAÇÕES PARA MELHORIAS E TESTES DE BACK   ------------
+-- ---------  INSERÇÕES E ALTERAÇÕES PARA MELHORIAS E TESTES DE BACK-END  ---------
 -- --------------------------------------------------------------------------------
 
 alter table tbProduto rename column descricacaoProd to descricaoProd;
@@ -87,3 +87,36 @@ alter table tbLogin modify column usuario varchar(50);
 delete from tbLogin where codUsu > 0;
 
 insert into tbLogin values (default, 'adm', '123456', 2, 'administrador', 'adm@adm.com');
+
+create table tbCarrinho(
+codCarrinho int primary key auto_increment,
+codUsu int references tbLogin(codUsu),
+codProduto int references tbProduto(codProd)
+);
+
+create table tbVenda(
+codVenda int primary key auto_increment,
+codCli int references tbCliente(codCli),
+datavenda varchar(10),
+valorFinal varchar(50)
+);
+
+alter table tbCarrinho rename column codProduto to codProd;
+alter table tbVenda rename column codProduto to codProd;
+
+alter table tbVenda rename column codCli to codUsu;
+
+delete from tbProduto where codProd > 0; 
+
+create table itemVenda(
+codItemVenda int primary key auto_increment,
+codVenda int references tbVenda(codVenda),
+codProd  int references tbProduto(codProd),
+qtdeVendas int,
+valorParcial varchar(50)
+);
+
+select * from itemVenda;
+select * from tbVenda;
+
+delete from tbLogin where tipo = 1;

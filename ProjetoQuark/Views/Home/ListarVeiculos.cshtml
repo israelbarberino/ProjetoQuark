@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ProjetoQuark.Models.ModelVeiculo>
+
+<br/>
+<h2 style="text-align:center; margin-top:20px;">Veículos cadastrados</h2>
+<p>
+    @Html.ActionLink("Cadastar novo", "CadVeiculos")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descricaoProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valorProd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantidadeProd)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeProd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricaoProd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valorProd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantidadeProd)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "AtualizaProduto", new { id = item.codProd }, new { @class = "btn btn-default btn-acao" }) |
+                @Html.ActionLink("Detalhar", "DetalhaProduto", new { id = item.codProd }, new { @class = "btn btn-default btn-acao" }) |
+                @Html.ActionLink("Excluir", "DeletaProduto", new { id = item.codProd }, new { @class = "btn btn-default btn-acao" })
+            </td>
+        </tr>
+    }
+
+</table>

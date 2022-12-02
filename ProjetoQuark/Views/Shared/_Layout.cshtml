@@ -29,8 +29,8 @@
                             Motocicletas <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Motos Elétricas", "ConsultaMotoEletrica", "Home")</li>
-                            <li>@Html.ActionLink("Motos Híbridas", "ConsultaMotoHibrida", "Home")</li>
+                            <li>@Html.ActionLink("100% Elétricas", "ConsultaMotoEletrica", "Home")</li>
+                            <li>@Html.ActionLink("Híbridas", "ConsultaMotoHibrida", "Home")</li>
                         </ul>
                     </li>
                     <li>
@@ -44,25 +44,24 @@
                     </li>
 
                     <li>@Html.ActionLink("Sobre nós", "About", "Home")</li>
-                    <li>@Html.ActionLink("Nosa Loja", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Loja física", "Contact", "Home")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (Session["tipoLogado2"] != null)
                     {
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Cadastrar <span class="caret"></span>
+                                Gerenciar veiculos <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-
-                                <li>@Html.ActionLink("Veículos", "CadVeiculos", "Home")</li>
-
+                                <li>@Html.ActionLink("Cadastrar veículos", "CadVeiculos", "Home")</li>
+                                <li>@Html.ActionLink("Listar veículos", "ListarVeiculos", "Home")</li>
                             </ul>
                         </li>
 
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Clientes <span class="caret"></span>
+                                Gerenciar clientes <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Cadastrar cliente", "CadLogin", "Adm")</li>

@@ -26,6 +26,30 @@ namespace ProjetoQuark.Dados
             con.MyDesconectarBD();
         }
 
+        public List<ModelVeiculo> GetTodosVeiculos()
+        {
+            List<ModelVeiculo> VeiculosList = new List<ModelVeiculo>();
+
+            MySqlCommand cmd = new MySqlCommand("select * from tbProduto order by codCat", con.MyConectarBD());
+            MySqlDataAdapter sd = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            sd.Fill(dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                VeiculosList.Add(
+                    new ModelVeiculo
+                    {
+                        codProd = Convert.ToString(dr["codProd"]),
+                        nomeProd = Convert.ToString(dr["nomeProd"]),
+                        descricaoProd = Convert.ToString(dr["descricaoProd"]),
+                        valorProd = Convert.ToString(dr["valorProd"]),
+                        quantidadeProd = Convert.ToString(dr["quantidadeProd"])
+                    });
+            }
+            return VeiculosList;
+        }
 
         public List<ModelVeiculo> GetCarros()
         {
@@ -272,7 +296,6 @@ namespace ProjetoQuark.Dados
             else
                 return false;
         }
-
 
     }
 }

@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Security.Claims;
 using System.Security.Policy;
+using System.Security.Cryptography;
 
 namespace ProjetoQuark.Controllers
 {
@@ -19,6 +20,7 @@ namespace ProjetoQuark.Controllers
         // GET: Adm
         AcoesLogin acLog = new AcoesLogin();
         AcoesCliente AcCli = new AcoesCliente();
+        AcoesVeiculos acV = new AcoesVeiculos();
 
 
         public ActionResult CadLogin()
@@ -82,6 +84,9 @@ namespace ProjetoQuark.Controllers
             ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
             return View();
         }
+
+        
+
 
     }
 }

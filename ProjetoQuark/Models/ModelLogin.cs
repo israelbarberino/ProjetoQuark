@@ -21,7 +21,7 @@ namespace ProjetoQuark.Models
         [Display(Name = "Senha")]
         public string senha { get; set; }
 
-        [DisplayName("Defina: 1 - para usuário comum ou 2 - para administrador")]
+        [DisplayName("Tipo de usuário: 1 - para cliente | 2 - para administrador")]
         public string tipo { get; set; }
         
         [Required]
